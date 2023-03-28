@@ -7,6 +7,9 @@ devDependencies:
   gulp-pug:
     specifier: ^5.0.0
     version: 5.0.0
+  pug-bem:
+    specifier: ^1.2.2
+    version: 1.2.2
 
 packages:
 
@@ -1695,6 +1698,10 @@ packages:
       constantinople: 4.0.1
       js-stringify: 1.0.2
       pug-runtime: 3.0.1
+    dev: true
+
+  /pug-bem@1.2.2:
+    resolution: {integrity: sha512-g+iRhebMMCth/Y/wMhc53Wy4pTztELIFMrhSLr5//DnK5yTPibwp+pqWiK4UzFVNgov00YqPx3IWR4gXQ3zE7w==}
     dev: true
 
   /pug-code-gen@3.0.2:
