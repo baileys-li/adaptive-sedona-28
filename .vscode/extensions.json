@@ -1,0 +1,9 @@
+{
+	"recommendations": [
+		"editorconfig.editorconfig",
+		"formulahendry.auto-complete-tag",
+		"oderwat.indent-rainbow",
+		"streetsidesoftware.code-spell-checker-russian",
+		"streetsidesoftware.code-spell-checker"
+	]
+}

@@ -1,0 +1,12 @@
+{
+	"name": "sedona-adaptive28",
+	"version": "1.0.0",
+	"description": "Демо проект в рамках менторства в HTML Academy",
+	"scripts": {},
+	"keywords": [],
+	"author": {
+		"name": "Arthur Baileys Li",
+		"url": "https://github.com/baileys-li"
+	},
+	"license": "ISC"
+}
