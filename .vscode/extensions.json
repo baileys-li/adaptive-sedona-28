@@ -4,6 +4,7 @@
 		"formulahendry.auto-complete-tag",
 		"oderwat.indent-rainbow",
 		"streetsidesoftware.code-spell-checker-russian",
-		"streetsidesoftware.code-spell-checker"
+		"streetsidesoftware.code-spell-checker",
+		"ducfilan.pug-formatter"
 	]
 }

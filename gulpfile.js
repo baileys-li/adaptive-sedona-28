@@ -1,22 +1,10 @@
 import gulp from "gulp";
+import pug from "gulp-pug";
 
-export default function defaultTask() {
-	console.log('Default task design');
-	return gulp.src('.editorconfig')
-		.pipe(gulp.dest('./'))
-
+function compilePug() {
+	return gulp.src("source/pages/*.pug")
+		.pipe(pug())
+		.pipe(gulp.dest("build/"));
 }
 
-export async function justReturn() {
-	return console.log('task without async competition');
-}
-
-export function promise(done) {
-	console.log('Task ending with callback');
-	done();
-}
-
-gulp.task('legacyWay', function (done) {
-	console.log('Task created with gulp.task');
-	done();
-});
+export default compilePug;
