@@ -1,10 +1,11 @@
 import gulp from "gulp";
 import pug from "gulp-pug";
 import pugBEM from "pug-bem";
-import { isDev } from "./mode.mjs";
-import { Path } from "./_constants.mjs";
 import plumber from "gulp-plumber";
 import notify from "gulp-notify";
+
+import { isDev } from "./mode.mjs";
+import { Path } from "./_constants.mjs";
 import { getPugData } from "./data.mjs";
 
 export function compilePug() {

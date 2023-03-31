@@ -15,4 +15,9 @@ export const Path = {
 		watch: `${DATA_DIR}/**/*.{yml, yaml}`,
 	},
 	ASSETS: `${SOURCE}/assets/**/*`,
+	STYLES: {
+		src: `${SOURCE}/sass/*.scss`,
+		dest: `${BUILD}/css`,
+		watch: `${SOURCE}/sass/**/*.scss`,
+	}
 };
