@@ -40,7 +40,7 @@ export function compileSass() {
 			sass({
 				outputStyle: isDevMode ? "expanded" : "compressed",
 				indentType: "tab",
-				includePaths: ["node_modules"],
+				includePaths: ["node_modules", Path.STYLES.common],
 			})
 		)
 		.pipe(postcss(pluginsPostCSS))
