@@ -5,18 +5,27 @@ import { isDev } from "./mode.mjs";
 import { Path } from "./_constants.mjs";
 import plumber from "gulp-plumber";
 import notify from "gulp-notify";
+import { getPugData } from "./data.mjs";
 
 export function compilePug() {
-	return gulp.src(Path.PUG.src)
-		.pipe(plumber({
-			errorHandler: notify.onError(error => ({
-				title: "Компиляция Pug",
-				message: error.message
-			}))
-		}))
-		.pipe(pug({
-			pretty: isDev(),
-			plugins: [pugBEM]
-		}))
+	const errorHandler = notify.onError((error) => ({
+		title: "Компиляция Pug",
+		message: error.message,
+	}));
+
+	const pugOptions = {
+		pretty: isDev(),
+		plugins: [pugBEM],
+		data: getPugData(),
+	};
+
+	const plumberOption = {
+		errorHandler,
+	};
+
+	return gulp
+		.src(Path.PUG.src)
+		.pipe(plumber(plumberOption))
+		.pipe(pug(pugOptions))
 		.pipe(gulp.dest(Path.BUILD));
 }

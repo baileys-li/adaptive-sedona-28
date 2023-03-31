@@ -10,4 +10,4 @@ const isProd = () => !isDev();
 const setProd = async () => await setMode("production");
 const setDev = async () => await setMode("development");
 
-export { isDev, isProd, setProd, setDev }
+export { isDev, isProd, setProd, setDev };
