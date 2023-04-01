@@ -7,6 +7,8 @@ const dirPath = Path.DATA.src;
 
 export function getPugData() {
 	const data = {};
+	if	(!fs.existsSync(dirPath)) return data;
+
 	fs.readdirSync(dirPath).forEach((fileName) => {
 		const key = path.parse(fileName).name;
 		const file = fs.readFileSync(`${dirPath}/${fileName}`, "utf8");
