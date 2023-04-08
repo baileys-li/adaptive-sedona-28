@@ -1,0 +1,50 @@
+form.review(action='https://echo.htmlacademy.ru/' method='post')
+		._header
+			h1._title Оставьте свой отзыв
+			p._subtitle Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях
+
+		fieldset._set.-left
+			legend._legend  Представьтесь
+			each data in review.personal
+				p.input
+					label._label(for=data.id)=data.label
+						if data.required
+							a(href="#req-note" aria-hidden="true") *
+					input._field(id=data.id name=data.id placeholder=data.placeholder  value=data.value type='text' autocomplete=data.autocomplete required=data.required)
+
+		fieldset._set.-right
+			legend._legend Контактная информация
+			each data in review.contacts
+				p.input
+					label._label(for=data.id)=data.label
+						if data.required
+							a(href="#req-note" aria-hidden="true") *
+					input._field.-icon(id=data.id name=data.id placeholder=data.placeholder type=data.type autocomplete=data.type required=data.required)
+					span._icon
+
+
+		fieldset._set
+			legend._legend.-border Ваше общее впечатление
+			ul._radios
+				each option in review.impression
+					li
+						label.check
+							input._input(type='radio' name='impression' value=option.value checked=option.checked)
+							| #{option.label}
+
+		fieldset._set
+			legend._legend.-border Посещенные достопримечательности
+			ul._checks
+				each option in review.attractions
+					li
+						label.check
+							input._input(type='checkbox' name='attractions' value=option.value checked=option.checked)
+							| #{option.label}
+
+		fieldset._set
+			legend#emotions-title._legend.-border Опишите свои эмоции
+			textarea._textarea(name='extra' placeholder='Опишите подробно все свои восторги' required rows=5 aria-labelledby='emotions-title')
+
+		._footer
+			button.button._submit(type='submit') Отправить отзыв
+			small#req-note._note * — обязательные поля

@@ -1,0 +1,56 @@
+personal:
+  - value: Пётр
+    id: first-name
+    label: Имя
+    placeholder: Укажите имя
+    autocomplete: given-name
+    required: true
+
+  - value: Пустота
+    id: last-name
+    label: Фамилия
+    placeholder: Укажите фамилию
+    autocomplete: family-name
+    required: true
+
+  - value: Викторович
+    id: patronymic
+    label: Отчество
+    placeholder: Укажите отчество
+    autocomplete: additional-name
+
+contacts:
+  - id: phone
+    label: Контактный телефон
+    placeholder: Введите телефон
+    required: true
+    type: tel
+
+  - id: email
+    label: Электронная почта
+    placeholder: Введите e-mail
+    required: true
+    type: email
+
+impression:
+  - value: positive
+    label: Скорее положительное
+    checked: true
+  - value: negative
+    label: Скорее отрицательное
+  - value: neutral
+    label: Затрудняюсь ответить
+
+attractions:
+  - value: devils-bridge
+    label: Мост Дьявола
+    checked: true
+  - value: mountain-bell
+    label: Гора-Колокол
+    checked: true
+  - value: slide-park
+    label: Слайд-парк
+    checked: true
+  - value: red-rocks
+    label: Красные скалы
+

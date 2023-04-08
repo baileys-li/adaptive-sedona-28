@@ -1,0 +1,17 @@
+- icon: vk
+  text: Мы ВКонтанте
+  link: https://vk.com/htmlacademy
+  width: 24
+  height: 24
+
+- icon: telegram
+  text: Наш Телеграм
+  link: https://t.me/htmlacademy
+  width: 24
+  height: 24
+
+- icon: youtube
+  text: Наш Ютуб канал
+  link: https://www.youtube.com/user/htmlacademyru
+  width: 24
+  height: 24
