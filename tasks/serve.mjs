@@ -2,7 +2,7 @@ import gulp from "gulp";
 import browserSync from "browser-sync";
 import { compilePug } from "./pug.mjs";
 import { Path } from "./_constants.mjs";
-import { copyAssets } from "./public.js";
+import { copyAssets, copyFonts } from "./public.js";
 import { compileSass } from "./styles.mjs";
 
 const server = browserSync.create();
@@ -28,7 +28,7 @@ async function serve() {
 	gulp.watch(Path.STYLES.watch, streamStyles);
 }
 
-const initialBuild = gulp.parallel(compilePug, copyAssets, compileSass);
+const initialBuild = gulp.parallel(compilePug, copyFonts, copyAssets, compileSass);
 const startServer = gulp.series(initialBuild, serve);
 
 export { initialBuild, startServer };

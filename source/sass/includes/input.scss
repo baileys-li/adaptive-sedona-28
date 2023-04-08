@@ -1,0 +1,37 @@
+.input {
+	&__label {
+		&::after {
+			content: ":";
+		}
+	}
+
+	&__field {
+		background-color: hsl(0, 0%, 95%);
+		font: inherit;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 1.44;
+
+		color: #000000;
+
+
+		&::placeholder {
+			color: rgba(0 0 0 / 30%);
+		}
+
+		&:hover {
+			background-color: #e5e5e5;
+		}
+
+		&:active,
+		&:focus {
+			background-color: #ffffff;
+			border-color: #e5e5e5;
+		}
+	}
+
+	&__wrapper &__field {
+		background-image: linear-gradient(to left, #e6e6e6 58px, transparent 58px);
+		background-repeat: no-repeat;
+	}
+}

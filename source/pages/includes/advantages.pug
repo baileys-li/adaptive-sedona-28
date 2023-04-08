@@ -1,25 +1,25 @@
 section.advantages
 	h2.page__hidden Преимущества.
 	p._header
-		strong.page__title._title Седона — небольшой городок в Аризоне, заслуживающий большего!
+		strong.page__subtitle._title Седона — небольшой городок в Аризоне, заслуживающий большего!
 		| Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!
 		ol._list
 			each advantage in advantages
 				if !advantage.image
 					li.advantage
-						h3._title=advantage.title
+						h3.page__subtitle._title=advantage.title
 						p._text=advantage.description
 				else
 					li
-						figure._panorama
+						figure.advantages__panorama
 							img._image(src=`img/${advantage.image}` alt=advantage.title width=320 height=260)
 							figcaption.advantage
-								h3._title=advantage.title
+								h3.page__subtitle._title=advantage.title
 								p._text=advantage.description
 
 						if advantage.sublist
-							ul._sublist
+							ul.advantages__sublist
 								each subadvantage in advantage.sublist
 									li._subitem(class=`advantages__subitem--${subadvantage.icon}`)
-										h4._subtitle=subadvantage.title
+										h4.page__subtitle._subtitle=subadvantage.title
 										p._subtext=subadvantage.description

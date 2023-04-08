@@ -1,0 +1,16 @@
+@use "mixins";
+
+.footer {
+	color: #000000;
+
+	&__link {
+		@include mixins.mobile-headline();
+		text-decoration: none;
+	}
+
+	&__copyright {
+		font-size: 14px;
+		line-height: 1.5;
+	}
+
+}

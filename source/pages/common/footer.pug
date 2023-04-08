@@ -1,12 +1,10 @@
 footer.footer
-	a(href="#" target="_blank" rel="noopener noreferrer")._link #visitSEDONA
-	.main-footer__hashtag.hashtag
-
+	a.link._link(href="#" target="_blank" rel="noopener noreferrer") #visitSEDONA
 	ul.socials._socials
 		each social of socials
-			li._item
-				a(href=social.link, target="_blank" rel="noopener noreferrer")=social.text
+			li
+				a.button._link(href=social.link, target="_blank" rel="noopener noreferrer")=social.text
 
 	small._copyright
-		a(href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noopener noreferrer").copyright="Разработано: "
-			img(src="#" alt="HTML Academy")
+		a.link(href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noopener noreferrer").copyright="Разработано: "
+			img(src="#" alt="HTML Академией.")

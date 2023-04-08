@@ -1,0 +1,26 @@
+@use "mixins";
+@use "variables";
+
+.page {
+	background-color: hsl(0, 0%, 95%);
+	font-family: "PT Sans", system-ui, sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.5;
+	text-transform: uppercase;
+	color: hsl(0deg 0% 20%);
+
+	&__body {
+		background-color: variables.$main-light;
+		box-shadow: 0px 5px 15px hsla(180, 100%, 0%, 0.2);
+
+		margin: 0 auto;
+		max-width: 1200px;
+		min-height: 100%;
+	}
+
+	&__title, &__subtitle {
+		color: hsl(0deg 0% 0%);
+		@include mixins.mobile-headline();
+	}
+}

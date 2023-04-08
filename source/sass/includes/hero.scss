@@ -1,0 +1,13 @@
+@use "mixins";
+@use 'variables.scss';
+
+.hero {
+	background: {
+		color: #00d8fb;
+		image: url('../img/hero@3x.jpg');
+		position: center;
+		size: cover;
+	}
+	color: variables.$main-light;
+	text-align: center;
+}

@@ -1,0 +1,9 @@
+.review {
+	// text-align: center;
+
+	&__legend {
+		&::after {
+			content: ':';
+		}
+	}
+}

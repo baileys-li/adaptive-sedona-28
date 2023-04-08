@@ -1,0 +1,8 @@
+@use "variables";
+.video {
+	background-color: variables.$accent;
+
+	&__button {
+		background-color: transparent;
+	}
+}

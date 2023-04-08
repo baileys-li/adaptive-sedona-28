@@ -1,0 +1,19 @@
+@use "variables";
+
+.advantages {
+	text-align: center;
+
+	&__list {
+		background-color: hsl(0, 0%, 93%);
+	}
+
+
+	&__panorama {
+		background-color: variables.$accent;
+		--text-l: 100%;
+	}
+
+	&__sublist {
+		background-color: variables.$main-light;
+	}
+}

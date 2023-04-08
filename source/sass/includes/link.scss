@@ -1,0 +1,21 @@
+@use "variables";
+
+.link {
+	color: inherit;
+	outline: {
+		color: currentColor;
+		offset: 0.4em;
+	}
+	text: {
+		decoration: none;
+		transform: uppercase;
+	}
+
+	&:is(:hover, :focus-visible) {
+		color: variables.$accent;
+	}
+
+	&:active {
+		color: hsl(0deg 0% 0% / 30%);
+	}
+}

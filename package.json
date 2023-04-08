@@ -32,5 +32,8 @@
 	},
 	"volta": {
 		"node": "18.15.0"
+	},
+	"dependencies": {
+		"@fontsource/pt-sans": "^4.5.11"
 	}
 }

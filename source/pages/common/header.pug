@@ -6,11 +6,9 @@ header.header
 		img(src='img/logo-city-of-sedona.svg' width='185' height='96' alt='Герб Седоны.')
 
 	nav.main-nav._nav
-		button._toggle(type='button')
-			span.page__hidden Открыть меню
-
+		button._toggle(type='button' aria-label='Открыть меню' hidden=true)
 		ul._list
 			each href, text in navigation
 				- const isCurrentPage = currentPage === href
 				li
-					a(href=href, aria-current=isCurrentPage ? 'page' : undefined)=text
+					a._link(href=href, aria-current=isCurrentPage ? 'page' : undefined)=text

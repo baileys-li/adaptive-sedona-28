@@ -1,0 +1,23 @@
+@use "mixins";
+@use "variables";
+
+.button {
+	font: {
+		family: inherit;
+		weight: 700;
+		size: 21px;
+	}
+	line-height: 1.24;
+	text: {
+		transform: uppercase;
+		decoration: none;
+	}
+
+	outline-offset: 0.2em;
+
+	@include mixins.button-colors();
+
+	&:disabled {
+		background-color: hsl(0, 0%, 90%);
+	}
+}

@@ -1,0 +1,6 @@
+@use "mixins";
+
+.header {
+	text-align: center;
+	@include mixins.mobile-headline();
+}

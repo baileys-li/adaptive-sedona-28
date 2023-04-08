@@ -1,0 +1,28 @@
+
+
+.photo-post {
+	text-transform: none;
+	text-align: initial;
+	&__image {
+		background-color: hsl(203, 47%, 66%);
+		color: #ffffff;
+	}
+
+	&__title {
+		font-weight: 700;
+		color: black;
+		text-transform: uppercase;
+		font-size: 1em;
+	}
+
+	&__like {
+		color: rgba(black, 30%);
+		background-color: transparent;
+
+		&::after {
+			content: attr(data-likes);
+			color: black;
+			transition: color 0.2s ease-in-out;
+		}
+	}
+}

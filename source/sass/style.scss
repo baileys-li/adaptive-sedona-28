@@ -1,0 +1,29 @@
+@use "common/global";
+
+// Bloks
+
+// Common
+@use "includes/page";
+@use "includes/header";
+@use "includes/main-nav";
+@use "includes/button";
+@use "includes/link";
+@use "includes/input";
+@use "includes/choose";
+@use "includes/footer";
+
+// First section
+@use "includes/hero";
+@use "includes/review";
+@use "includes/advantages";
+@use "includes/advantage";
+
+@use "includes/search-hotel";
+@use "includes/map";
+
+
+
+@use "includes/gallery";
+@use "includes/photo-post";
+@use "includes/video-presentation";
+@use "includes/video";
