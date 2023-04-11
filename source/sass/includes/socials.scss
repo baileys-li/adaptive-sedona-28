@@ -1,0 +1,18 @@
+
+$block-size: 48px;
+
+.socials {
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: $block-size;
+	grid-auto-rows: $block-size;
+	gap: 6px;
+
+
+	&__link {
+		display: grid;
+		place-items: center;
+		height: 100%;
+		padding: 0;
+	}
+}

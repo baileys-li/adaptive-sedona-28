@@ -1,10 +1,11 @@
 footer.footer
 	a.link._link(href="#" target="_blank" rel="noopener noreferrer") #visitSEDONA
-	ul.socials._socials
+	ul.socials._socials.page__no-list
 		each social of socials
 			li
-				a.button._link(href=social.link, target="_blank" rel="noopener noreferrer")=social.text
+				a.button._link(href=social.link, target="_blank" rel="noopener noreferrer" title=social.text aria-label=social.text)
+					+placeholderIcon({width: 24 })
 
 	small._copyright
-		a.link(href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noopener noreferrer").copyright="Разработано: "
-			img(src="#" alt="HTML Академией.")
+		a.link.copyright(href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noopener noreferrer")="Разработано "
+			+placeholderIcon({width: 28, height: 35, label: "HTML Академией."})

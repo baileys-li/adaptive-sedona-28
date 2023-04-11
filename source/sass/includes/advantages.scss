@@ -3,17 +3,61 @@
 .advantages {
 	text-align: center;
 
+	&__header {
+		margin: 0;
+		padding: 32px 20px 35px;
+	}
+
+	&__title {
+		margin-bottom: 35px;
+		display: block;
+	}
+
 	&__list {
 		background-color: hsl(0, 0%, 93%);
 	}
 
-
 	&__panorama {
 		background-color: variables.$accent;
+		margin: 0;
+		padding: 0;
+		display: grid;
 		--text-l: 100%;
+	}
+
+	&__image {
+		order: 1;
+		width: 100%;
+		object-fit: cover;
 	}
 
 	&__sublist {
 		background-color: variables.$main-light;
+
+		display: grid;
+		text-align: left;
+		padding: 22px 18px 46px;
+		gap: 25px;
+	}
+
+	&__full, &__sublist {
+		grid-column: 1 / -1;
+	}
+
+	@media (width >= variables.$bpTablet) {
+		&__list, &__panorama, &__sublist {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		&__image {
+			grid-column-end: span 2;
+
+		}
+
+		&__full:nth-child(even) &__image {
+			order: 0;
+		}
+
 	}
 }

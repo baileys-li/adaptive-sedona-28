@@ -9,6 +9,9 @@
 	line-height: 1.5;
 	text-transform: uppercase;
 	color: hsl(0deg 0% 20%);
+	height: 100%;
+
+	min-width: 300px;
 
 	&__body {
 		background-color: variables.$main-light;
@@ -17,10 +20,46 @@
 		margin: 0 auto;
 		max-width: 1200px;
 		min-height: 100%;
+
+		display: grid;
+		grid-template-rows: auto 1fr auto;
 	}
 
 	&__title, &__subtitle {
 		color: hsl(0deg 0% 0%);
 		@include mixins.mobile-headline();
+	}
+
+
+
+	&__hidden {
+		border: 0;
+		clip: rect(0 0 0 0);
+		clip-path: inset(50%);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		white-space: nowrap;
+		width: 1px;
+	}
+
+	&__no-list {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+
+	@media (width >= variables.$bpTablet) {
+		&__subtitle {
+			font-size: calc(21 / 14 * 1em);
+			line-height: 1.24;
+		}
+
+		&__title {
+			font-size: calc(30 / 14 * 1em);
+			line-height: 0.87;
+		}
 	}
 }

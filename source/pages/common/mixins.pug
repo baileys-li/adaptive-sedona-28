@@ -1,0 +1,7 @@
+mixin placeholderIcon({width, height = width, fill = 'currentColor', label})
+	-
+		const hidden = !label && "true"
+		const role = label && "img"
+	svg(width=width height=height viewBox=`0 0 ${width} ${height}`
+		fill=fill aria-hidden=hidden arial-label=label, role=role)
+		rect(width=width height=height)

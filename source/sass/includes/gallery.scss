@@ -1,3 +1,35 @@
+@use "variables";
+@use "mixins";
+
 .gallery {
 	text-align: center;
+
+	&__title {
+		margin: 36px auto 1em;
+	}
+
+	&__text {
+		margin: 0 auto 30px;
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	}
+
+	&__item {
+		border-bottom: 1px solid #e5e5e5;
+
+		&:first-child {
+			border-top: 1px solid #e5e5e5;
+			grid-column: 1 / -1;
+		}
+	}
+
+	@media (width >= variables.$bpTablet) {
+		&__item {
+			border: none;
+		}
+
+	}
 }

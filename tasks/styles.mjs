@@ -15,21 +15,21 @@ import { Path } from "./_constants.mjs";
 const sass = gulpSass(dartSass);
 const pluginsPostCSS = [preset(), calc({ precision: 3 })];
 
+const errorHandler = notify.onError((error) => ({
+	title: "Компиляция стилей",
+	message: error.message,
+}));
+
+const plumberOption = {
+	errorHandler,
+};
+
 export function compileSass() {
 	const isDevMode = isDev();
 
 	!isDevMode && pluginsPostCSS.push(sortMQ({
 		sort: "mobile-first",
 	}), csso());
-
-	const errorHandler = notify.onError((error) => ({
-		title: "Компиляция стилей",
-		message: error.message,
-	}));
-
-	const plumberOption = {
-		errorHandler,
-	};
 
 	return gulp
 		.src(Path.STYLES.src, {
@@ -44,7 +44,6 @@ export function compileSass() {
 			})
 		)
 		.pipe(postcss(pluginsPostCSS))
-
 		.pipe(
 			gulp.dest(Path.STYLES.dest, {
 				sourcemaps: ".",

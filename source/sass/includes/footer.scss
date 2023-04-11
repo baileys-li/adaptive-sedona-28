@@ -1,16 +1,28 @@
 @use "mixins";
+@use "variables";
 
 .footer {
 	color: #000000;
+	padding: 33px 20px;
+	display: grid;
+	gap: 30px;
+	justify-items: center;
 
 	&__link {
 		@include mixins.mobile-headline();
-		text-decoration: none;
 	}
 
 	&__copyright {
 		font-size: 14px;
 		line-height: 1.5;
+	}
+
+
+	@media (width >= variables.$bpTablet)  {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 36px 60px;
 	}
 
 }

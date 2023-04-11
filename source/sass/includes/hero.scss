@@ -1,13 +1,41 @@
 @use "mixins";
-@use 'variables.scss';
+@use "variables";
 
 .hero {
 	background: {
 		color: #00d8fb;
-		image: url('../img/hero@3x.jpg');
+		image: url(https://picsum.photos/320/389);
 		position: center;
 		size: cover;
 	}
 	color: variables.$main-light;
+	display: grid;
+	place-items: center;
 	text-align: center;
+	min-height: 389px;
+	padding: 20px;
+
+	&--inner {
+		min-height: 158px;
+		background-image: url(https://picsum.photos/320/158);
+	}
+
+	@media (width >= variables.$bpTablet) {
+		min-height: 518px;
+		background-image: url(https://picsum.photos/768/518);
+
+		&--inner {
+			min-height: 290px;
+			background-image: url(https://picsum.photos/320/290);
+		}
+	}
+
+	@media (width >= variables.$bp🖥️) {
+		background-image: url(https://picsum.photos/1200/518);
+
+		&--inner {
+			min-height: 301px;
+			background-image: url(https://picsum.photos/1200/301);
+		}
+	}
 }

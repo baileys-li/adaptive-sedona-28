@@ -7,8 +7,8 @@ header.header
 
 	nav.main-nav._nav
 		button._toggle(type='button' aria-label='Открыть меню' hidden=true)
-		ul._list
+		ul._list.page__no-list
 			each href, text in navigation
 				- const isCurrentPage = currentPage === href
-				li
+				li._item
 					a._link(href=href, aria-current=isCurrentPage ? 'page' : undefined)=text

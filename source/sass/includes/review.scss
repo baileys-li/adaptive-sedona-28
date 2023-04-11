@@ -1,9 +1,79 @@
+@use "mixins";
+@use "variables";
+
 .review {
 	// text-align: center;
 
+	&__header {
+		text-align: center;
+		padding: 40px 0;
+	}
+
+	&__set {
+		border-color: #e5e5e5;
+		border-width: 1px 0 0;
+		margin: 0;
+		padding: 24px 20px;
+	}
+
 	&__legend {
+		float: left;
+		width: 100%;
+		text-align: center;
+		margin-bottom: 30px;
 		&::after {
-			content: ':';
+			content: ":";
+		}
+	}
+
+	&__footer {
+		padding: 0 20px;
+		display: grid;
+		justify-items: end;
+		gap: 20px;
+	}
+
+	&__submit {
+		width: 100%;
+	}
+
+	@media (width >= variables.$bpTablet) {
+		&__two-columns {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 40px;
+
+			position: relative;
+
+			margin-bottom: 50px;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: -2%;
+				left: 50%;
+				translate: -50% 0;
+				width: 1px;
+				height: 104%;
+				background-color: #e5e5e5;
+			}
+		}
+
+		&__set {
+			border-top-width: 0;
+
+			&--border {
+				border-top-width: 1px;
+			}
+		}
+
+		&__set--border &__legend {
+			width: 400px;
+		}
+
+		&__legend {
+			float: none;
+			width: auto;
 		}
 	}
 }

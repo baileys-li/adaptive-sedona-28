@@ -1,3 +1,6 @@
+@use "mixins";
+@use "variables";
+
 .input {
 	&__label {
 		&::after {
@@ -12,7 +15,12 @@
 		font-size: 18px;
 		line-height: 1.44;
 
+		width: 100%;
+
 		color: #000000;
+
+		border: none;
+		padding: 16px;
 
 
 		&::placeholder {
@@ -34,4 +42,7 @@
 		background-image: linear-gradient(to left, #e6e6e6 58px, transparent 58px);
 		background-repeat: no-repeat;
 	}
+
+
+
 }
