@@ -20,5 +20,11 @@ export const Path = {
 		dest: `${BUILD}/css`,
 		watch: `${SOURCE}/sass/**/*.scss`,
 		common: `${SOURCE}/sass/common/`,
-	}
+	},
+	SCRIPTS: {
+		src: `${SOURCE}/typescript/*.ts`,
+		dest: `${BUILD}/js`,
+		watch: `${SOURCE}/typescript/**/*.ts`,
+	},
 };
+

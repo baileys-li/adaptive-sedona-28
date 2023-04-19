@@ -1,15 +1,18 @@
 @use "variables";
 
 .advantages {
+	counter-set: feature;
 	text-align: center;
 
 	&__header {
 		margin: 0;
-		padding: 32px 20px 35px;
+		padding: 48px 20px 56px;
 	}
 
 	&__title {
-		margin-bottom: 35px;
+		margin: 0 auto 2em;
+		max-width: 580px;
+
 		display: block;
 	}
 
@@ -40,11 +43,36 @@
 		gap: 25px;
 	}
 
-	&__full, &__sublist {
+	&__full {
 		grid-column: 1 / -1;
 	}
 
-	@media (width >= variables.$bpTablet) {
+	@media (width < variables.$earlyBP) {
+		&__header {
+			padding-top: 32px;
+			padding-bottom: 35px;
+			position: relative;
+
+			&::after {
+				content: "";
+				position: absolute;
+				height: 17px;
+				inset: auto 0 -16px;
+				background-color: var(--back-c);
+				clip-path: polygon(0 0, 50% 100%, 100% 0);
+			}
+		}
+
+		&__item + &__item {
+			border-top: 1px solid hsl(0, 0%, 84%);
+		}
+	}
+
+	@media (width >= variables.$earlyBP) {
+		&__title {
+			margin-bottom: 25px;
+		}
+
 		&__list, &__panorama, &__sublist {
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
@@ -58,6 +86,5 @@
 		&__full:nth-child(even) &__image {
 			order: 0;
 		}
-
 	}
 }

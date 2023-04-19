@@ -1,8 +1,10 @@
 @use "mixins";
-@use "variables";
+@use "variables" as *;
 
 .page {
-	background-color: hsl(0, 0%, 95%);
+	--side-offset: 20px;
+
+	background-color: $page-bg;
 	font-family: "PT Sans", system-ui, sans-serif;
 	font-size: 14px;
 	font-weight: 400;
@@ -11,10 +13,12 @@
 	color: hsl(0deg 0% 20%);
 	height: 100%;
 
+
 	min-width: 300px;
 
 	&__body {
-		background-color: variables.$main-light;
+		--back-c: #{$main-light};
+		background-color: var(--back-c);
 		box-shadow: 0px 5px 15px hsla(180, 100%, 0%, 0.2);
 
 		margin: 0 auto;
@@ -51,7 +55,8 @@
 		list-style: none;
 	}
 
-	@media (width >= variables.$bpTablet) {
+	@media (width >= $bpTablet) {
+		--side-offset: 60px;
 		&__subtitle {
 			font-size: calc(21 / 14 * 1em);
 			line-height: 1.24;
@@ -61,5 +66,9 @@
 			font-size: calc(30 / 14 * 1em);
 			line-height: 0.87;
 		}
+	}
+
+	@media (width >= $bp🖥️) {
+		--side-offset: 120px;
 	}
 }

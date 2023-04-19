@@ -1,15 +1,17 @@
-@use "variables";
+@use "variables" as *;
 @use "mixins";
 
 .gallery {
 	text-align: center;
+	padding: 36px 0 0;
 
 	&__title {
-		margin: 36px auto 1em;
+		margin: 0 auto 1em;
 	}
 
 	&__text {
 		margin: 0 auto 30px;
+		max-width: 458px;
 	}
 
 	&__list {
@@ -26,10 +28,14 @@
 		}
 	}
 
-	@media (width >= variables.$bpTablet) {
+	@media (width >= $bpTablet) {
+		padding: 62px var(--side-offset) 0;
 		&__item {
 			border: none;
 		}
+	}
 
+	@media (width >= $bp🖥️) {
+		padding: 100px 0 0;
 	}
 }

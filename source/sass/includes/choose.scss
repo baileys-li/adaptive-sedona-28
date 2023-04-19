@@ -6,7 +6,71 @@
 	line-height: 1.44;
 	text-transform: none;
 
+	cursor: pointer;
+
+	display: flex;
+	gap: 16px;
+
+	align-content: center;
+	align-items: center;
+
 	&__input {
 		accent-color: currentColor;
+		font: inherit;
+
+		appearance: none;
+		inline-size: 46px;
+		block-size: 46px;
+
+		border-radius: 4px;
+
+		border: none;
+		margin: 0;
+		padding: 0;
+
+		transition-property: border-color, box-shadow;
+		transition-duration: 120ms;
+		transition-timing-function: ease-in-out;
+
+		flex-shrink: 0;
+
+		--background-chose: hsl(0, 0%, 95%);
+		--check-color: hsl(0, 0%, 20%);
+
+		background-color: var(--background-chose);
+
+		&[type="radio"] {
+			border-radius: 50%;
+			background-color: var(--check-color);
+			box-shadow: inset 0 0 0 30px var(--background-chose);
+
+			&:checked {
+				box-shadow: inset 0 0 0 13px var(--background-chose);
+			}
+		}
+
+		&[type="checkbox"] {
+			display: grid;
+			padding: 12px 15px;
+			&::after {
+				content: "";
+				aspect-ratio: 1;
+				transform: scale(var(--is-checked, 0));
+				transition: 120ms transform ease-in-out;
+				mask: url(../img/tick.svg) no-repeat center/contain;
+				background: var(--check-color);
+			}
+
+			&:checked {
+				--is-checked: 1.2;
+			}
+		}
+
+		&:disabled {
+			opacity: 0.4;
+		}
 	}
+
+
+
 }

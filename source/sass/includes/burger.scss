@@ -1,0 +1,13 @@
+.burger {
+	&__close {
+		display: none;
+	}
+
+	&[aria-expanded="true"] &__close {
+		display: block;
+	}
+
+	&[aria-expanded="true"] &__open {
+		display: none;
+	}
+}

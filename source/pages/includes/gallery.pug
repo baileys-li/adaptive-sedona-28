@@ -11,3 +11,4 @@ section.gallery
 					h3._title=photo.title
 					p._description Автор фото:#{photo.author}
 					button._like(type='button' aria-label="Поставить лайк" aria-description=`Всего ${photo.likes}` data-likes=photo.likes)
+						+placeholderIcon({width: 24, height: 22 })

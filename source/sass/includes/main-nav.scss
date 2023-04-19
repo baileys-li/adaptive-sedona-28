@@ -2,10 +2,19 @@
 @use "mixins";
 
 .main-nav {
+	&--enabled {
+		display: grid;
+		position: relative;
+	}
+
 	&__toggle {
 		background-color: transparent;
 		color: variables.$accent;
-
+		border: 0;
+		padding: 17px 20px;
+		justify-self: end;
+		cursor: pointer;
+		z-index: 11;
 		&:hover {
 			opacity: 0.6;
 		}
@@ -19,7 +28,9 @@
 		padding-top: 100px;
 		display: grid;
 		font-weight: 700;
+		width: 100%;
 	}
+
 
 	&__link {
 		text-decoration: none;
@@ -42,9 +53,28 @@
 			box-shadow: inset 0px 1px 0px hsla(0 0% 100% / 20%),
 				inset 0 -7px 20px 0 hsl(0deg 0% 0% / 20%);
 		}
+
+		&--enabled &__list {
+			position: absolute;
+			top: 0;
+			padding-top: 0;
+			z-index: 10;
+			translate: 0 -100%;
+
+			transition: translate 0.3s ease-in-out;
+		}
+
+		&__toggle[aria-expanded="true"] + &__list {
+			translate: 0 0;
+		}
+
 	}
 
 	@media (width >= variables.$bpTablet) {
+
+		&__toggle {
+			display: none;
+		}
 
 		&__list {
 			grid-template-columns: repeat(5, 1fr);
@@ -59,8 +89,8 @@
 
 		&__link {
 			@include mixins.link-styles;
-			padding: 18px 10px 17px;
-			max-width: 14ch;
+			padding: 18px 0 17px;
+			width: fit-content;
 			margin: auto;
 
 			&[aria-current] {

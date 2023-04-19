@@ -6,6 +6,7 @@
 @use "includes/page";
 @use "includes/header";
 @use "includes/main-nav";
+@use "includes/burger";
 @use "includes/button";
 @use "includes/link";
 @use "includes/input";
@@ -20,6 +21,7 @@
 @use "includes/review";
 @use "includes/advantages";
 @use "includes/advantage";
+@use "includes/subitem";
 
 @use "includes/search-hotel";
 @use "includes/map";

@@ -3,8 +3,23 @@
 	margin: 0 18px;
 	padding: 37px 0;
 
+	display: grid;
+	align-content: center;
+	gap: 20px;
+
+	&::before {
+		counter-increment: feature;
+		content: "— №" counter(feature) " —";
+		display: block;
+	}
+
 	&__title {
 		color: hsl(0deg 0%  var(--text-l, 0%));
+		margin: 0;
+		order: -1;
+	}
+
+	&__text {
 		margin: 0;
 	}
 }

@@ -11,7 +11,7 @@ form.review(action='https://echo.htmlacademy.ru/' method='post')
 				p.input
 					label._label(for=data.id)=data.label
 						if data.required
-							a.link(href="#req-note" aria-hidden="true") *
+							a.link(href="#req-note" aria-hidden="true" tabindex=-1) *
 					input._field(id=data.id name=data.id placeholder=data.placeholder  value=data.value type='text' autocomplete=data.autocomplete required=data.required)
 
 		fieldset._set
@@ -20,11 +20,11 @@ form.review(action='https://echo.htmlacademy.ru/' method='post')
 				p.input
 					label._label(for=data.id)=data.label
 						if data.required
-							a.link(href="#req-note" aria-hidden="true") *
+							a.link(href="#req-note" aria-hidden="true" tabindex=-1) *
 					span._wrapper
 						input._field.-icon(id=data.id name=data.id placeholder=data.placeholder type=data.type autocomplete=data.type required=data.required)
 						span._icon
-
+							+placeholderIcon({width: 18})
 
 	fieldset._set.-border
 		legend.page__subtitle._legend Ваше общее впечатление
@@ -46,7 +46,7 @@ form.review(action='https://echo.htmlacademy.ru/' method='post')
 
 	fieldset._set.-border.input
 		legend#emotions-title.page__subtitle._legend Опишите свои эмоции
-		textarea.input__field.-textarea(name='extra' placeholder='Опишите подробно все свои восторги' required rows=5 aria-labelledby='emotions-title')
+		textarea.input__field.-textarea.review__area(name='extra' placeholder='Опишите подробно все свои восторги' required rows=5 aria-labelledby='emotions-title')
 
 	._footer
 		button.button._submit(type='submit') Отправить отзыв

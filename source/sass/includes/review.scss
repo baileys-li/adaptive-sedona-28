@@ -1,7 +1,8 @@
 @use "mixins";
-@use "variables";
+@use "variables" as *;
 
 .review {
+
 	// text-align: center;
 
 	&__header {
@@ -14,16 +15,25 @@
 		border-width: 1px 0 0;
 		margin: 0;
 		padding: 24px 20px;
+		display: grid;
+		gap: 16px;
+		align-content: start;
 	}
 
 	&__legend {
 		float: left;
 		width: 100%;
 		text-align: center;
-		margin-bottom: 30px;
+		margin: 0 auto 30px;
 		&::after {
 			content: ":";
 		}
+	}
+
+	&__checks, &__radios {
+		display: grid;
+		gap: 16px;
+		margin: 0;
 	}
 
 	&__footer {
@@ -37,11 +47,64 @@
 		width: 100%;
 	}
 
-	@media (width >= variables.$bpTablet) {
+	@media (width >= $bpTablet) {
+		padding: 0 var(--side-offset);
+		&__set {
+			border-top-width: 0;
+			padding: 0;
+
+			&--border {
+				border-top: 1px solid #e5e5e5;
+				margin-bottom: 60px;
+			}
+		}
+
+		&__set--border &__legend {
+			width: 400px;
+
+		}
+
+		&__legend {
+			float: none;
+			width: auto;
+
+		}
+
+		&__footer {
+			display: grid;
+			grid-template-columns: 324px auto;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0;
+		}
+
+		&__area, &__footer {
+			width: 100%;
+			margin: 0 auto;
+			max-width: 768px;
+		}
+
+		&__note {
+			font-size: 14px;
+			line-height: 1.5;
+		}
+
+
+		&__checks, &__radios {
+			justify-content: center;
+			grid-template-columns: repeat(auto-fit, 224px);
+		}
+
+		&__radios {
+			grid-template-columns: repeat(auto-fit, 280px);
+		}
+	}
+
+	@media (width >= ($bpTablet + 5rem)) {
 		&__two-columns {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
-			gap: 40px;
+			gap: 58px;
 
 			position: relative;
 
@@ -58,22 +121,11 @@
 				background-color: #e5e5e5;
 			}
 		}
+	}
 
-		&__set {
-			border-top-width: 0;
-
-			&--border {
-				border-top-width: 1px;
-			}
-		}
-
-		&__set--border &__legend {
-			width: 400px;
-		}
-
-		&__legend {
-			float: none;
-			width: auto;
+	@media (width >= $bp🖥️) {
+		&__two-columns {
+			gap: 100px;
 		}
 	}
 }

@@ -1,19 +1,36 @@
+@use "variables" as *;
 .video-presentation {
+	padding: 18px var(--side-offset, 20px) 0;
+
 	text-align: center;
-	padding:  18px 20px 0;
 	max-width: 800px;
 	margin: 0 auto;
 
 	&__header {
-		margin: 0 auto 1em;
+		margin: 0 auto 2.7em;
+		max-width: 44ch;
 	}
 
 	&__title {
 		display: block;
-		margin-bottom: 0.8em;
+		margin: 0 auto 0.5em;
 	}
 
 	&__video {
 		width: 100%;
+		height: auto;
+		max-width: 800px;
+		max-height: 500px;
+		margin: 0 auto;
+		aspect-ratio: 280 / 177;
+		background-color: hsl(203, 47%, 66%);
+	}
+
+	@media (width >= $bpTablet) {
+		padding-top: 58px;
+	}
+
+	@media (width >= $bp🖥️) {
+		padding-top: 62px;
 	}
 }
