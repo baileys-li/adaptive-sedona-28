@@ -1,21 +1,19 @@
-const BASE_CLASS = "main-nav";
-const navigation = document.querySelector(`.${BASE_CLASS}`);
-const toggle = navigation?.querySelector<HTMLButtonElement>(`.${BASE_CLASS}__toggle`);
+const BASE_CLASS = "main-nav",
+			navigation = document.querySelector(`.${BASE_CLASS}`),
+			toggle = navigation?.querySelector<HTMLButtonElement>(`.${BASE_CLASS}__toggle`),
+			list = navigation?.querySelector<HTMLUListElement>(`.${BASE_CLASS}__list`);
 
-
-function toggleNav() {
-	const isWillBeOpen = (toggle as HTMLButtonElement).getAttribute('aria-expanded') === 'false';
-	(toggle as HTMLButtonElement).setAttribute('aria-expanded', String(isWillBeOpen));
-	(toggle as HTMLButtonElement).ariaLabel = `${isWillBeOpen ? 'Закрыть' : 'Открыть'} меню`;
-}
-
-export function initNav() {
-	if (!navigation || !toggle) {
-		return;
-	}
-
+if (navigation && toggle && list) {
 	toggle.hidden = false;
 	navigation.classList.add(`${BASE_CLASS}--enabled`);
 
 	toggle.addEventListener("click", toggleNav);
+}
+
+function toggleNav() {
+	const isWillBeOpen = toggle!.getAttribute('aria-expanded') === 'false';
+
+	toggle!.setAttribute('aria-expanded', String(isWillBeOpen));
+	toggle!.ariaLabel = toggle!.title = `${isWillBeOpen ? 'Закрыть' : 'Открыть'} меню`;
+	list!.inert = !isWillBeOpen;
 }
