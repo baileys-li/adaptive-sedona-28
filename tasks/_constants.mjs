@@ -26,5 +26,9 @@ export const Path = {
 		dest: `${BUILD}/js`,
 		watch: `${SOURCE}/typescript/**/*.ts`,
 	},
+	IMAGES: {
+		src: `${SOURCE}/images/**/*`,
+		dest: `${BUILD}/img`,
+	}
 };
 

@@ -5,6 +5,7 @@ import { Path } from "./_constants.mjs";
 import { copyAssets, copyFonts } from "./public.js";
 import { compileSass } from "./styles.mjs";
 import { compileScripts } from "./scripts.mjs";
+import { processImages } from "./images.mjs";
 
 const server = browserSync.create();
 
@@ -28,9 +29,10 @@ async function serve() {
 	gulp.watch(Path.ASSETS, copyAssets);
 	gulp.watch(Path.STYLES.watch, streamStyles);
 	gulp.watch(Path.SCRIPTS.watch, compileScripts);
+	gulp.watch(Path.IMAGES.src, processImages);
 }
 
-const initialBuild = gulp.parallel(compilePug, copyFonts, copyAssets, compileSass, compileScripts);
+const initialBuild = gulp.parallel(compilePug, copyFonts, copyAssets, compileSass, compileScripts, processImages);
 const startServer = gulp.series(initialBuild, serve);
 
 export { initialBuild, startServer };

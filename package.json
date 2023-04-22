@@ -5,7 +5,8 @@
 	"type": "module",
 	"scripts": {
 		"start": "gulp",
-		"build": "gulp build"
+		"build": "gulp build",
+		"cache:clear": "gulp clearCache"
 	},
 	"keywords": [],
 	"author": {
@@ -17,22 +18,25 @@
 		"browser-sync": "^2.29.1",
 		"del": "^7.0.0",
 		"gulp": "^4.0.2",
+		"gulp-cache": "^1.1.3",
 		"gulp-esbuild": "^0.11.1",
 		"gulp-notify": "^4.0.0",
 		"gulp-plumber": "^1.2.1",
 		"gulp-postcss": "^9.0.1",
 		"gulp-pug": "^5.0.0",
 		"gulp-sass": "^5.1.0",
+		"gulp-sharp-responsive": "^0.4.0",
 		"postcss-calc": "^8.2.4",
 		"postcss-csso": "^6.0.1",
-		"postcss-preset-env": "^8.3.0",
-		"postcss-sort-media-queries": "^4.3.0",
+		"postcss-preset-env": "^8.3.2",
+		"postcss-sort-media-queries": "^4.4.1",
 		"pug-bem": "^1.2.2",
-		"sass": "^1.60.0",
+		"sass": "^1.62.0",
+		"supports-webp": "^3.0.0",
 		"yaml": "^2.2.1"
 	},
 	"volta": {
-		"node": "18.15.0"
+		"node": "18.16.0"
 	},
 	"dependencies": {
 		"@fontsource/pt-sans": "^4.5.11"
