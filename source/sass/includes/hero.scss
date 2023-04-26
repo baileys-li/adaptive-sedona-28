@@ -4,10 +4,10 @@
 .hero {
 	background: {
 		color: #00d8fb;
-		image: url(https://picsum.photos/320/389);
 		position: center;
 		size: cover;
 	}
+	@include mixins.adaptive-bg("../img/hero", ".jpg");
 	color: variables.$main-light;
 	display: grid;
 	place-items: center;
@@ -30,12 +30,12 @@
 
 	&--inner {
 		min-height: 158px;
-		background-image: url(https://picsum.photos/320/158);
+		@include mixins.adaptive-bg("../img/hero-sliced", ".jpg");
 	}
 
 	@media (width >= variables.$earlyBP) {
 		min-height: 518px;
-		background-image: url(https://picsum.photos/768/518);
+		@include mixins.adaptive-bg("../img/hero-tab", ".jpg");
 
 		&__logo {
 			width: 462px;
@@ -49,7 +49,7 @@
 
 		&--inner {
 			min-height: 290px;
-			background-image: url(https://picsum.photos/320/290);
+			@include mixins.adaptive-bg("../img/hero-sliced-tab", ".jpg");
 		}
 
 		&--inner &__logo {
@@ -59,7 +59,7 @@
 	}
 
 	@media (width >= 58rem) {
-		background-image: url(https://picsum.photos/1200/518);
+		@include mixins.adaptive-bg("../img/hero-desk", ".jpg");
 
 		&::after {
 			clip-path: polygon(0 100%, 0 0, 21.2% 42%, 21.2% 0%, 50% 97%, 78.8% 0%, 78.8% 42%, 100% 0, 100% 100%);
@@ -67,7 +67,7 @@
 
 		&--inner {
 			min-height: 301px;
-			background-image: url(https://picsum.photos/1200/301);
+			@include mixins.adaptive-bg("../img/hero-sliced-desk", ".jpg");
 		}
 	}
 }

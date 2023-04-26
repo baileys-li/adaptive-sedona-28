@@ -12,7 +12,13 @@ section.advantages
 				else
 					li._full
 						figure.advantages__panorama
-							img.advantages__image(src=`img/${advantage.image}` alt=advantage.title width=320 height=260)
+							+adaptivePic({
+										picClass: 'advantages__image',
+										src: `img/features/${advantage.image}`,
+										alt: advantage.title,
+										sizes: [[800, 256], [512, 256], [320, 260]]
+									})
+
 							figcaption.advantage
 								h3.page__subtitle._title=advantage.title
 								p._text=advantage.description

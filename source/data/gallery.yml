@@ -1,23 +1,31 @@
-- src: non-native-spaces.jpg
-  alt: Дорога в горы в лучах восходящего солнца.
+- image:
+    src: photo01
+    alt: Дорога в горы в лучах восходящего солнца.
+    sizes: [[1200, 400], [648, 400], [280, 280]]
   title: Неродные просторы
   author: Борис
   likes: 1350
 
-- src: road-and-forest.jpg
-  alt: Растения в Седоне.
+- image:
+    src: photo02
+    alt: Растения в Седоне.
+    sizes: [[400, 267], [324, 267], [280, 280]]
   title: Местная растительность
   author: Сергей
   likes: 143
 
-- src: plants.jpg
-  alt: Лесная дорога в Седоне.
+- image:
+    src: photo03
+    alt: Лесная дорога в Седоне.
+    sizes: [[400, 267], [324, 267], [280, 280]]
   title: Дорога на север
   author: Петр
   likes: 96
 
-- src: devils-bridge.jpg
-  alt: Мост дьявола.
+- image:
+    src: photo04
+    alt: Камни в Седоне.
+    sizes: [[400, 267], [324, 267], [280, 280]]
   title: Мост дьявола
   author: Антон
   likes: 254

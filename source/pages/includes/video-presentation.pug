@@ -5,6 +5,11 @@ section.video-presentation
 		| Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
 	.video._video
 		a(href="https://youtu.be/b4AQAzsstaM", target="_blank", rel="noopener noreferrer")._link
-			img._image(src='img/catalog/video.jpg' width=280 height=177 alt='Тур по Седоне.')
+			+adaptivePic({
+				picClass: 'video__image',
+				src: `img/video/video`,
+				alt: 'Тур по Седоне.',
+				sizes: [[800, 500], [648, 500], [280, 177]]
+			})
 		button(hidden aria-label="Воспроизвести видео")._play
 			+placeholderIcon({width: 48, height: 54, fill: 'white' })._icon

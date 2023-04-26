@@ -13,7 +13,11 @@ import { isDev } from "./mode.mjs";
 import { Path } from "./_constants.mjs";
 
 const sass = gulpSass(dartSass);
-const pluginsPostCSS = [preset(), calc({ precision: 3 })];
+const pluginsPostCSS = [preset({
+	features: {
+		'image-set-function': false,
+	}
+}), calc({ precision: 3 })];
 
 const errorHandler = notify.onError((error) => ({
 	title: "Компиляция стилей",

@@ -1,6 +1,6 @@
 - title: Настоящий городок
   description: Седона не аттракцион для туристов, там течет своя жизнь
-  image: view-of-the-cafe-and-the-sedona-mountains.jpg
+  image: town
   alt: Вид на кафе и горы Седоны
   sublist:
     - title: Жилье
@@ -15,7 +15,7 @@
 
 - title: Там есть мост дьявола
   description: Да, по нему можно пройти! Если вы осмелитесь, конечно
-  image: devils-bridge.jpg
+  image: bridge
   alt: Обтёсанный природой каменный мост сквозь ущелье.
 
 - title: Небольшая площадь

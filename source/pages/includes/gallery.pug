@@ -6,7 +6,11 @@ section.gallery
 	._list
 		each photo in gallery
 			figure.photo-post._item
-				img._image(src=`img/catalog/${photo.src}` alt=photo.alt width=280 height=280)
+				+adaptivePic({
+					picClass: 'photo-post__image',
+					...photo.image,
+					src: `img/catalog/${photo.image.src}`,
+				})
 				figcaption._caption
 					h3._title=photo.title
 					p._description Автор фото:#{photo.author}

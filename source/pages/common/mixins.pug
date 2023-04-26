@@ -4,3 +4,28 @@ mixin placeholderIcon({width, height = width, fill = 'currentColor', label, clas
 		const role = label && "img"
 	svg(width=width height=height viewBox=`0 0 ${width} ${height}` fill=fill aria-hidden=hidden arial-label=label role=role class=className )
 		rect(width=width height=height)
+
+
+mixin adaptivePic({className, loading = 'lazy', alt = '.', src, ext = 'jpg', scales = ['2x', '3x'], sizes, picClass, medias = ['(min-width: 1000px)', '(min-width: 500px)'], formats = ['avif', 'webp'], suffixes = ['desk', 'tab'] })
+	-
+		const defaultSize = sizes.at(-1);
+		const allFormats = [...formats, ext];
+
+	picture(class=picClass)
+		each media, index in medias
+			each ext in allFormats
+				-
+					const set = [`${src}-${suffixes[index]}.${ext} 1x`];
+					scales.forEach(scale => set.push(`${src}-${suffixes[index]}@${scale}.${ext} ${scale}`));
+					const srcset = set.join(', ');
+				source(srcset=srcset media=media, type=`image/${ext}` width=sizes[index][0] height=sizes[index][1] )
+
+		each ext in formats
+			-
+				const set = [`${src}.${ext} 1x`];
+				scales.forEach(scale => set.push(`${src}@${scale}.${ext} ${scale}`));
+				const srcset = set.join(', ');
+			source(srcset=srcset type=`image/${ext}` )
+
+		- const srcset = scales.map((size) => `${src}@${size}.${ext} ${size}`).join(', ')
+		img(class=className src=`${src}.${ext}` srcset=srcset alt=alt loading=loading width=defaultSize[0] height=defaultSize[1] )

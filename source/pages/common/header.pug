@@ -3,13 +3,13 @@
 header.header
 	a(href=isMainPage ? undefined : 'index.html',
 		tabindex=isMainPage ? undefined : -1)._logo
-		img(src='img/logo-city-of-sedona.svg' width='185' height='96' alt='Герб Седоны.')
+		img(src='img/logo-city-of-sedona.svg' width=185 height=96 alt='Герб Седоны.')
 
 	nav.main-nav._nav
-		button.burger._toggle(type='button' aria-label='Открыть меню' hidden=true aria-expanded='false')
+		button.burger._toggle(type='button' aria-label='Открыть меню' hidden=true aria-expanded='false' aria-controls='main-nav')
 			span._open 🍔
 			span._close ✖️
-		ul._list.page__no-list
+		ul._list.page__no-list#main-nav
 			each href, text in navigation
 				- const isCurrentPage = currentPage === href
 				li._item
