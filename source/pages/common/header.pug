@@ -1,11 +1,11 @@
 -
 	const isMainPage = currentPage === 'index.html'
 header.header
-	a(href=isMainPage ? undefined : 'index.html',
-		tabindex=isMainPage ? undefined : -1)._logo
+	a(href=!isMainPage && 'index.html',
+		tabindex=!isMainPage && -1)._logo
 		img(src='img/logo-city-of-sedona.svg' width=185 height=96 alt='Герб Седоны.')
 
-	nav.main-nav._nav
+	nav._nav
 		button.burger._toggle(type='button' aria-label='Открыть меню' hidden=true aria-expanded='false' aria-controls='main-nav')
 			span._open 🍔
 			span._close ✖️
@@ -13,4 +13,4 @@ header.header
 			each href, text in navigation
 				- const isCurrentPage = currentPage === href
 				li._item
-					a._link(href=href, aria-current=isCurrentPage ? 'page' : undefined)=text
+					a._link(href=href, aria-current=isCurrentPage && 'page')=text
