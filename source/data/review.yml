@@ -25,12 +25,14 @@ contacts:
     placeholder: Введите телефон
     required: true
     type: tel
+    icon: phone
 
   - id: email
     label: Электронная почта
     placeholder: Введите e-mail
     required: true
     type: email
+    icon: mail
 
 impression:
   - value: positive

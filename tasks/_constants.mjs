@@ -3,6 +3,8 @@ const SOURCE = "source";
 
 const PUG_DIR = `${SOURCE}/pages`;
 const DATA_DIR = `${SOURCE}/data`;
+const ICONS_DIR = `${SOURCE}/icons`;
+const IMAGES_DIR = `${SOURCE}/images`;
 
 export const Path = {
 	BUILD,
@@ -27,8 +29,13 @@ export const Path = {
 		watch: `${SOURCE}/typescript/**/*.ts`,
 	},
 	IMAGES: {
-		src: `${SOURCE}/images/**/*`,
+		src: `${IMAGES_DIR}/**/*.{jpg,png}`,
 		dest: `${BUILD}/img`,
+	},
+	ICONS: {
+		dir: `${ICONS_DIR}`,
+		watch: `${ICONS_DIR}/**/*.svg`,
+		src: `${IMAGES_DIR}/**/*.svg`,
 	}
 };
 

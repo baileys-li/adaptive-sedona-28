@@ -27,6 +27,6 @@ section.advantages
 							ul.advantages__sublist.page__no-list
 								each subadvantage in advantage.sublist
 									li.subitem
-										+placeholderIcon({width: 40, fill: '#81B3D2', className: 'subitem__icon'})
+										+spriteIcon({href: `img/features.svg#${subadvantage.icon}`, width: 40, fill: '#81B3D2', className: 'subitem__icon'})
 										h4._title.page__subtitle=subadvantage.title
 										p._text=subadvantage.description

@@ -5,6 +5,15 @@ mixin placeholderIcon({width, height = width, fill = 'currentColor', label, clas
 	svg(width=width height=height viewBox=`0 0 ${width} ${height}` fill=fill aria-hidden=hidden arial-label=label role=role class=className )
 		rect(width=width height=height)
 
+mixin spriteIcon({width, height = width, fill = 'currentColor', label, className=undefined, href, id})
+	-
+		const hidden = !label && "true"
+		const role = label && "img"
+		const titleID = id && `title-${id}`
+	svg(width=width height=height viewBox=`0 0 ${width} ${height}` fill=fill aria-hidden=hidden role=role class=className arial-labelledby=titleID)
+		if label
+			title(id=titleID)=label
+		use(href=href)
 
 mixin adaptivePic({className, loading = 'lazy', alt = '.', src, ext = 'jpg', scales = ['2x', '3x'], sizes, picClass, medias = ['(min-width: 1000px)', '(min-width: 500px)'], formats = ['avif', 'webp'], suffixes = ['desk', 'tab'] })
 	-

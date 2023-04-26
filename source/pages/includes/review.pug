@@ -24,7 +24,7 @@ form.review(action='https://echo.htmlacademy.ru/' method='post')
 					span._wrapper
 						input._field.-icon(id=data.id name=data.id placeholder=data.placeholder type=data.type autocomplete=data.type required=data.required)
 						span._icon
-							+placeholderIcon({width: 18})
+							+spriteIcon({href: `img/sprite.svg#${data.icon}`, width: 18 })
 
 	fieldset._set.-border
 		legend.page__subtitle._legend Ваше общее впечатление

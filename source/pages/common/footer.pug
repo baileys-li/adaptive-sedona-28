@@ -4,8 +4,7 @@ footer.footer
 		each social of socials
 			li
 				a.button._link(href=social.link, target="_blank" rel="noopener noreferrer" title=social.text aria-label=social.text)
-					+placeholderIcon({width: 24 })
-
+					+spriteIcon({href: `img/sprite.svg#${social.icon}`, width: 24})
 	small._copyright
 		a.link.copyright(href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noopener noreferrer")="Разработано "
-			+placeholderIcon({width: 28, height: 35, label: "HTML Академией."})
+			+spriteIcon({href: `img/sprite.svg#academy`, width: 28, height: 35, label: "HTML Академией.", id: 'academy'})

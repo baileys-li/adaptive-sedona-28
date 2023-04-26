@@ -57,7 +57,7 @@
 				aspect-ratio: 1;
 				transform: scale(var(--is-checked, 0));
 				transition: 120ms transform ease-in-out;
-				mask: url(../img/tick.svg) no-repeat center/contain;
+				mask: url(../img/sprite.svg#tick) no-repeat center/contain;
 				background: var(--check-color);
 			}
 

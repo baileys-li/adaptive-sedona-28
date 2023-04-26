@@ -1,7 +1,7 @@
 if isMainPage
 	section.hero
 		h1.page__hidden Добро пожаловать в прекрасную Седону!
-		img._logo(src='img/title.svg' alt='Потому что Гранд Каньон отстой!' width=282 height=214)
+		+spriteIcon({href: `img/intro.svg#full`, width: 282, height: 214, label: "Потому что Гранд Каньон отстой!", className: 'hero__icon', id: 'intro'})
 else
 	.hero.-inner
-		img.hero__logo(src='img/catalog/sedona.svg' alt='Седона.')
+		+spriteIcon({href: `img/intro.svg#sedona`, width: 229, height: 39, label: "Седона.", className: 'hero__icon', id: 'intro'})

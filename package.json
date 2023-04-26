@@ -26,6 +26,8 @@
 		"gulp-pug": "^5.0.0",
 		"gulp-sass": "^5.1.0",
 		"gulp-sharp-responsive": "^0.4.0",
+		"gulp-stacksvg": "^2.0.1",
+		"gulp-svgmin": "^4.1.0",
 		"postcss-calc": "^8.2.4",
 		"postcss-csso": "^6.0.1",
 		"postcss-preset-env": "^8.3.2",
