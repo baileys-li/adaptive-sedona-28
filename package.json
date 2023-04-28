@@ -6,7 +6,8 @@
 	"scripts": {
 		"start": "gulp",
 		"build": "gulp build",
-		"cache:clear": "gulp clearCache"
+		"cache:clear": "gulp clearCache",
+		"lint": "gulp lint"
 	},
 	"keywords": [],
 	"author": {
@@ -20,6 +21,7 @@
 		"gulp": "^4.0.2",
 		"gulp-cache": "^1.1.3",
 		"gulp-esbuild": "^0.11.1",
+		"gulp-html-bemlinter": "^2.1.3",
 		"gulp-notify": "^4.0.0",
 		"gulp-plumber": "^1.2.1",
 		"gulp-postcss": "^9.0.1",
@@ -28,14 +30,15 @@
 		"gulp-sharp-responsive": "^0.4.0",
 		"gulp-stacksvg": "^2.0.1",
 		"gulp-svgmin": "^4.1.0",
+		"gulp-w3c-html-validator": "^5.2.0",
 		"postcss-calc": "^8.2.4",
 		"postcss-csso": "^6.0.1",
 		"postcss-preset-env": "^8.3.2",
-		"postcss-sort-media-queries": "^4.4.1",
+		"postcss-sort-media-queries": "^5.1.0",
 		"pug-bem": "^1.2.2",
-		"sass": "^1.62.0",
+		"sass": "^1.62.1",
 		"supports-webp": "^3.0.0",
-		"yaml": "^2.2.1"
+		"yaml": "^2.2.2"
 	},
 	"volta": {
 		"node": "18.16.0"

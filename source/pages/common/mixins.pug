@@ -10,7 +10,7 @@ mixin spriteIcon({width, height = width, fill = 'currentColor', label, className
 		const hidden = !label && "true"
 		const role = label && "img"
 		const titleID = id && `title-${id}`
-	svg(width=width height=height viewBox=`0 0 ${width} ${height}` fill=fill aria-hidden=hidden role=role class=className arial-labelledby=titleID)
+	svg(class=className role=role width=width height=height viewBox=`0 0 ${width} ${height}` fill=fill aria-hidden=hidden  aria-labelledby=titleID)
 		if label
 			title(id=titleID)=label
 		use(href=href)
