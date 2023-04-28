@@ -7,7 +7,7 @@
 		position: center;
 		size: cover;
 	}
-	@include mixins.adaptive-bg("../img/hero", ".jpg");
+	@include mixins.adaptive-bg("../img/hero");
 	color: variables.$main-light;
 	display: grid;
 	place-items: center;
