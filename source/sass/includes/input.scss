@@ -58,9 +58,8 @@
 	$icon-wrapper-size: 58px;
 
 	&__wrapper &__field {
-		padding-right: calc(16px + $icon-wrapper-size);;
+		padding-right: calc(16px + $icon-wrapper-size);
 	}
-
 
 	&__icon {
 		position: absolute;
@@ -74,11 +73,27 @@
 		color: hsl(0, 0%, 0%);
 		background-color: #e6e6e6;
 		transition: color 200ms ease-in;
+
+		&::before {
+			content: "";
+			display: block;
+			width: $icon-size;
+			height: $icon-size;
+			mask-repeat: no-repeat;
+			mask-position: center;
+			background-color: currentColor;
+		}
 	}
 
 	&__field:focus + &__icon {
 		color: $accent;
 	}
 
+	&__field[type=email] + &__icon::before {
+		mask-image: url("../img/sprite.svg#mail");
+	}
 
+	&__field[type=tel] + &__icon::before {
+		mask-image: url("../img/sprite.svg#phone");
+	}
 }
