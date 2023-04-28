@@ -1,7 +1,14 @@
-export function initVideo(wrapper: HTMLElement) {
-	const button = wrapper.querySelector<HTMLButtonElement>(".video__play"),
-		link = wrapper.querySelector<HTMLAnchorElement>(".video__link"),
-		image = wrapper.querySelector<HTMLImageElement>(".video__image");
+const BEM_BLOCK = "video";
+
+const initVideos = () =>
+	document.querySelectorAll<HTMLElement>(`.${BEM_BLOCK}`).forEach(initVideo);
+
+function initVideo(wrapper: HTMLElement) {
+	const button = wrapper.querySelector<HTMLButtonElement>(
+			`.${BEM_BLOCK}__play`
+		),
+		link = wrapper.querySelector<HTMLAnchorElement>(`.${BEM_BLOCK}__link`),
+		image = wrapper.querySelector<HTMLImageElement>(`.${BEM_BLOCK}__image`);
 
 	if (!button || !link || !image) return;
 
@@ -38,3 +45,5 @@ function createYouTubeFrame(
 
 	return iframe;
 }
+
+export { initVideos };
