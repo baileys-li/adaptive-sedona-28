@@ -1,4 +1,4 @@
-form.review(action='https://echo.htmlacademy.ru/' method='post')
+form.review(action='https://echo.htmlacademy.ru/' method='post' novalidate)
 	._header
 		h1.page__title._title Оставьте свой отзыв
 		p._subtitle Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях
@@ -52,8 +52,16 @@ form.review(action='https://echo.htmlacademy.ru/' method='post')
 		button.button._submit(type='submit') Отправить отзыв
 		small#req-note._note * — обязательные поля
 
-dialog#success()
+dialog#success.modal.-footer
 	form(method="dialog")
-		h2 Тут будет заговолок
-		p Тут будет текст
-		button.button() Закрыть
+		._wrapper
+			h2._title.page__title Ваш отзыв отправлен!
+			p._text Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.
+		._footer
+			button._button.button Закрыть окно
+
+dialog#fail.modal
+	form._wrapper(method="dialog")
+		h2._title.page__title Что то пошло не так!
+		p._text Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
+		button._button.button OK

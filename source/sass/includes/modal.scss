@@ -1,0 +1,73 @@
+@use "variables" as *;
+
+.modal {
+	border: none;
+	padding: 0;
+	width: 100%;
+	max-width: 400px;
+	text-align: center;
+
+	&::backdrop {
+		background: rgba(#000000, 30%);
+	}
+	&--footer {
+		max-width: 640px;
+	}
+
+	&__wrapper {
+		padding-block: 45px 35px;
+		padding-inline: 42px;
+	}
+
+	&__title {
+		margin-block: 0 1em;
+
+	}
+
+	&__text {
+		margin-block: 0 2em;
+	}
+
+	&__button {
+		min-width: 180px;
+		max-width: 458px;
+		margin-inline: auto;
+
+	}
+
+	&__footer {
+		padding: 20px;
+		background-color: hsla(0, 0%, 95%, 1);
+	}
+
+	&__footer &__button {
+		width: 100%;
+	}
+
+	@media (width >= $bpTablet) {
+
+		&__wrapper {
+			padding-block: 38px 40px;
+			padding-inline: 46px;
+		}
+
+		&--footer &__wrapper {
+			padding-block-end: 0;
+		}
+
+		&__title {
+			line-height: 1.33;
+		}
+
+		&__text {
+			margin-block-end: 3em;
+		}
+		&__button {
+			min-width: 272px;
+		}
+
+		&__footer {
+			padding-block: 44px;
+		}
+	}
+}
