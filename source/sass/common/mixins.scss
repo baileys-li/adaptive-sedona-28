@@ -45,7 +45,7 @@
 }
 
 /* stylelint-disable declaration-block-no-duplicate-properties */
-@mixin adaptive-bg($image, $ext: ".jpg") {
+@mixin adaptive-bg($image, $ext: "jpg") {
 	background: {
 		image: image-set(
 			url("#{$image}@3x.webp") 3x,
