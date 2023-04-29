@@ -17,7 +17,7 @@
 	}
 
 	&__list {
-		background-color: hsl(0, 0%, 93%);
+		background-color: hsl(0 0% 93%);
 	}
 
 	&__panorama {
@@ -70,7 +70,7 @@
 		}
 
 		&__item + &__item {
-			border-top: 1px solid hsl(0, 0%, 84%);
+			border-top: 1px solid hsl(0 0% 84%);
 		}
 	}
 

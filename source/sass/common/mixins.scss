@@ -15,11 +15,11 @@
 	outline-color: var(--back);
 
 	&:is(:hover, :focus-visible) {
-		--back: hsl(203, 42%, 58%);
+		--back: hsl(203 42% 58%);
 	}
 
 	&:active {
-		--back: hsl(202, 44%, 54%);
+		--back: hsl(202 44% 54%);
 		color: rgba($color: variables.$main-light, $alpha: 0.3);
 	}
 }

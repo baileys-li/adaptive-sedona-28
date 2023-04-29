@@ -34,7 +34,7 @@
 
 		flex-shrink: 0;
 
-		--background-chose: hsl(0, 0%, 95%);
+		--background-chose: hsl(0 0% 95%);
 
 		background-color: var(--background-chose);
 
@@ -45,7 +45,7 @@
 			aspect-ratio: 1;
 			transform: scale(var(--is-checked, 0));
 			transition: 120ms transform ease-in-out;
-			background-color: hsl(0, 0%, 20%);
+			background-color: hsl(0 0% 20%);
 		}
 
 		&[type="radio"],

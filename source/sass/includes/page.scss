@@ -18,7 +18,7 @@
 	&__body {
 		--back-c: #{$main-light};
 		background-color: var(--back-c);
-		box-shadow: 0 5px 15px hsla(180, 100%, 0%, 0.2);
+		box-shadow: 0 5px 15px hsl(180 100% 0% / 0.2);
 
 		margin: 0 auto;
 		max-width: 1200px;
