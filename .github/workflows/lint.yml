@@ -24,7 +24,7 @@ jobs:
         cache: 'pnpm'
 
     - name: Install dependencies 📦
-      run: pnpm i --ignore-scripts
+      run: pnpm i
 
     - name: Build 🏗️
       run: pnpm build
