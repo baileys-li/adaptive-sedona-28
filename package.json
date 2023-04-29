@@ -45,8 +45,9 @@
 		"postcss-sort-media-queries": "^5.1.0",
 		"pug-bem": "^1.2.2",
 		"sass": "^1.62.1",
-		"stylelint": "^14.16.1",
+		"stylelint": "^15.6.0",
 		"stylelint-config-htmlacademy": "^1.1.4",
+		"stylelint-config-standard-scss": "^9.0.0",
 		"supports-webp": "^3.0.0",
 		"yaml": "^2.2.2"
 	},

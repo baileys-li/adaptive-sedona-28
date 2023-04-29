@@ -19,7 +19,7 @@
 		margin: 0 auto;
 	}
 
-	@media (width < $earlyBP) {
+	@media (width < $early-bp) {
 		padding: 60px 18px 58px;
 
 		&__button {

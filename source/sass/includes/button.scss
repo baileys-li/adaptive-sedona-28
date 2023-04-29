@@ -7,6 +7,7 @@
 		weight: 700;
 		size: 21px;
 	}
+
 	line-height: 1.24;
 	text: {
 		transform: uppercase;
@@ -17,9 +18,9 @@
 	border: none;
 	padding: 16px;
 
-	@include mixins.button-colors();
+	@include mixins.button-colors;
 
 	&:disabled {
-		background-color: hsl(0 0% 90%);
+		background-color: hsl(0deg 0% 90%);
 	}
 }

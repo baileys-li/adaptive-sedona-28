@@ -28,7 +28,7 @@
 		}
 	}
 
-	@media (width >= $bpTablet) {
+	@media (width >= $bp-tablet) {
 		padding: 62px var(--side-offset) 0;
 
 		&__item {
@@ -36,7 +36,7 @@
 		}
 	}
 
-	@media (width >= $bp🖥️) {
+	@media (width >= $bp-desk) {
 		padding: 100px 0 0;
 	}
 }

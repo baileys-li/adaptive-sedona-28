@@ -10,7 +10,7 @@
 	justify-items: center;
 
 	&__link {
-		@include mixins.mobile-headline();
+		@include mixins.mobile-headline;
 	}
 
 	&__copyright {
@@ -19,7 +19,7 @@
 	}
 
 
-	@media (width >= $bpTablet) {
+	@media (width >= $bp-tablet) {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;

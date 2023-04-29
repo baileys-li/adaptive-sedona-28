@@ -12,18 +12,16 @@
 	text-transform: uppercase;
 	color: hsl(0deg 0% 20%);
 	height: 100%;
-
 	min-width: 300px;
 
 	&__body {
 		--back-c: #{$main-light};
-		background-color: var(--back-c);
-		box-shadow: 0 5px 15px hsl(180 100% 0% / 0.2);
 
+		background-color: var(--back-c);
+		box-shadow: 0 5px 15px hsl(180deg 100% 0% / 20%);
 		margin: 0 auto;
 		max-width: 1200px;
 		min-height: 100%;
-
 		display: grid;
 		grid-template-rows: auto 1fr auto;
 	}
@@ -32,7 +30,7 @@
 	&__subtitle {
 		color: hsl(0deg 0% 0%);
 
-		@include mixins.mobile-headline();
+		@include mixins.mobile-headline;
 	}
 
 	&__hidden {
@@ -54,7 +52,7 @@
 		list-style: none;
 	}
 
-	@media (width >= $bpTablet) {
+	@media (width >= $bp-tablet) {
 		--side-offset: 60px;
 
 		&__subtitle {
@@ -68,7 +66,7 @@
 		}
 	}
 
-	@media (width >= $bp🖥️) {
+	@media (width >= $bp-desk) {
 		--side-offset: 120px;
 	}
 }

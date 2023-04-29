@@ -8,7 +8,7 @@
 	padding: 24px 20px;
 
 	&__image {
-		background-color: hsl(203 47% 66%);
+		background-color: hsl(203deg 47% 66%);
 		color: #ffffff;
 		width: 100%;
 		display: flex;
@@ -29,7 +29,6 @@
 	&__like {
 		color: rgba(#000000, 30%);
 		background-color: transparent;
-
 		cursor: pointer;
 		border: none;
 		padding: 0;
@@ -45,16 +44,17 @@
 		}
 
 		&[aria-pressed="true"] {
-			color: hsl(203 47% 66%);
+			color: hsl(203deg 47% 66%);
+
 			--filled: currentColor;
 		}
 
 		&:is(:hover, :focus-visible) {
-			color: hsl(203 47% 66%);
+			color: hsl(203deg 47% 66%);
 		}
 	}
 
-	@media (width >= $bpTablet) {
+	@media (width >= $bp-tablet) {
 		padding: 0;
 		background-color: $page-bg;
 
@@ -80,7 +80,7 @@
 		}
 	}
 
-	@media (width >= $bp🖥️) {
+	@media (width >= $bp-desk) {
 		position: relative;
 		display: flex;
 

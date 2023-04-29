@@ -2,7 +2,6 @@
 
 .video-presentation {
 	padding: 18px var(--side-offset, 20px) 0;
-
 	text-align: center;
 	max-width: 800px;
 	margin: 0 auto;
@@ -25,11 +24,11 @@
 		background-color: hsl(203deg 47% 66%);
 	}
 
-	@media (width >= $bpTablet) {
+	@media (width >= $bp-tablet) {
 		padding-top: 58px;
 	}
 
-	@media (width >= $bp🖥️) {
+	@media (width >= $bp-desk) {
 		padding-top: 62px;
 		padding-inline: 0;
 	}

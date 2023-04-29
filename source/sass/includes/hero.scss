@@ -9,6 +9,7 @@
 	}
 
 	@include mixins.adaptive-bg("../img/hero");
+
 	color: variables.$main-light;
 	display: grid;
 	place-items: center;
@@ -35,7 +36,7 @@
 		@include mixins.adaptive-bg("../img/hero-sliced");
 	}
 
-	@media (width >= variables.$earlyBP) {
+	@media (width >= variables.$early-bp) {
 		min-height: 518px;
 
 		@include mixins.adaptive-bg("../img/hero-tab");

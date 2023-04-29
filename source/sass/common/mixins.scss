@@ -5,22 +5,25 @@
 		weight: 700;
 		size: calc(18 / 14 * 1rem);
 	}
+
 	line-height: calc(26 / 18);
 }
 
 @mixin button-colors {
 	--back: #{variables.$accent};
+
 	color: variables.$main-light;
 	background-color: var(--back);
 	outline-color: var(--back);
 
 	&:is(:hover, :focus-visible) {
-		--back: hsl(203 42% 58%);
+		--back: hsl(203deg 42% 58%);
 	}
 
 	&:active {
-		--back: hsl(202 44% 54%);
-		color: rgba($color: variables.$main-light, $alpha: 0.3);
+		--back: hsl(202deg 44% 54%);
+
+		color: rgba($color: variables.$main-light, $alpha: 30%);
 	}
 }
 

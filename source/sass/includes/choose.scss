@@ -1,43 +1,33 @@
 .choose {
 	text-align: left;
-
 	font-weight: 700;
 	font-size: 18px;
 	line-height: 1.44;
 	text-transform: none;
-
 	cursor: pointer;
-
 	display: flex;
 	gap: 16px;
-
 	align-content: center;
 	align-items: center;
 
 	&__input {
 		accent-color: currentColor;
 		font: inherit;
-
 		appearance: none;
 		inline-size: 46px;
 		block-size: 46px;
-
 		border-radius: 4px;
-
 		border: none;
 		margin: 0;
 		padding: 12px;
-
 		transition-property: border-color, box-shadow;
 		transition-duration: 120ms;
 		transition-timing-function: ease-in-out;
-
 		flex-shrink: 0;
 
-		--background-chose: hsl(0 0% 95%);
+		--background-chose: hsl(0deg 0% 95%);
 
 		background-color: var(--background-chose);
-
 		display: grid;
 
 		&::after {
@@ -45,7 +35,7 @@
 			aspect-ratio: 1;
 			transform: scale(var(--is-checked, 0));
 			transition: 120ms transform ease-in-out;
-			background-color: hsl(0 0% 20%);
+			background-color: hsl(0deg 0% 20%);
 		}
 
 		&[type="radio"],

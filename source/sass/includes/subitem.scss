@@ -18,7 +18,7 @@
 		margin: 0;
 	}
 
-	@media (width >= variables.$bpTablet) {
+	@media (width >= variables.$bp-tablet) {
 		grid-template-columns: 1fr;
 		text-align: center;
 		padding: 20px 36px;

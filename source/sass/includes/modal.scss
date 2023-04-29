@@ -6,7 +6,7 @@
 	width: 100%;
 	max-width: 400px;
 	text-align: center;
-	box-shadow: 0 7px 15px rgb(0 1 1 / 0.15);
+	box-shadow: 0 7px 15px rgb(0 1 1 / 15%);
 
 	&::backdrop {
 		background: rgba(#000000, 30%);
@@ -37,14 +37,14 @@
 
 	&__footer {
 		padding: 20px;
-		background-color: hsl(0 0% 95% / 1);
+		background-color: hsl(0deg 0% 95% / 100%);
 	}
 
 	&__footer &__button {
 		width: 100%;
 	}
 
-	@media (width >= $bpTablet) {
+	@media (width >= $bp-tablet) {
 		&__wrapper {
 			padding-block: 38px 40px;
 			padding-inline: 46px;

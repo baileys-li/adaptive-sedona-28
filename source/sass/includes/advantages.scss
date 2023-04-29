@@ -12,12 +12,11 @@
 	&__title {
 		margin: 0 auto 2em;
 		max-width: 580px;
-
 		display: block;
 	}
 
 	&__list {
-		background-color: hsl(0 0% 93%);
+		background-color: hsl(0deg 0% 93%);
 	}
 
 	&__panorama {
@@ -25,6 +24,7 @@
 		margin: 0;
 		padding: 0;
 		display: grid;
+
 		--text-l: 100%;
 	}
 
@@ -42,7 +42,6 @@
 
 	&__sublist {
 		background-color: variables.$main-light;
-
 		display: grid;
 		text-align: left;
 		padding: 22px 18px 46px;
@@ -53,7 +52,7 @@
 		grid-column: 1 / -1;
 	}
 
-	@media (width < variables.$earlyBP) {
+	@media (width < variables.$early-bp) {
 		&__header {
 			padding-top: 32px;
 			padding-bottom: 35px;
@@ -70,11 +69,11 @@
 		}
 
 		&__item + &__item {
-			border-top: 1px solid hsl(0 0% 84%);
+			border-top: 1px solid hsl(0deg 0% 84%);
 		}
 	}
 
-	@media (width >= variables.$earlyBP) {
+	@media (width >= variables.$early-bp) {
 		&__title {
 			margin-bottom: 25px;
 		}
