@@ -26,6 +26,9 @@ jobs:
     - name: Install dependencies 📦
       run: pnpm i --ignore-scripts
 
+    - name: Build 🏗️
+      run: pnpm build
+
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4
       with:
