@@ -8,6 +8,7 @@
 	&__label {
 		display: block;
 		padding-left: 16px;
+
 		&::after {
 			content: ":";
 		}
@@ -89,11 +90,11 @@
 		color: $accent;
 	}
 
-	&__field[type=email] + &__icon::before {
+	&__field[type="email"] + &__icon::before {
 		mask-image: url("../img/sprite.svg#mail");
 	}
 
-	&__field[type=tel] + &__icon::before {
+	&__field[type="tel"] + &__icon::before {
 		mask-image: url("../img/sprite.svg#phone");
 	}
 }

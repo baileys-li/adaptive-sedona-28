@@ -6,11 +6,12 @@
 	width: 100%;
 	max-width: 400px;
 	text-align: center;
-	box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+	box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
 
 	&::backdrop {
 		background: rgba(#000000, 30%);
 	}
+
 	&--footer {
 		max-width: 640px;
 	}
@@ -22,7 +23,6 @@
 
 	&__title {
 		margin-block: 0 1em;
-
 	}
 
 	&__text {
@@ -33,7 +33,6 @@
 		min-width: 180px;
 		max-width: 458px;
 		margin-inline: auto;
-
 	}
 
 	&__footer {
@@ -46,7 +45,6 @@
 	}
 
 	@media (width >= $bpTablet) {
-
 		&__wrapper {
 			padding-block: 38px 40px;
 			padding-inline: 46px;
@@ -63,6 +61,7 @@
 		&__text {
 			margin-block-end: 3em;
 		}
+
 		&__button {
 			min-width: 272px;
 		}

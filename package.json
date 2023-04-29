@@ -2,22 +2,29 @@
 	"name": "sedona-adaptive28",
 	"version": "1.0.0",
 	"description": "Демо проект в рамках менторства в HTML Academy",
-	"type": "module",
-	"scripts": {
-		"start": "gulp",
-		"build": "gulp build",
-		"cache:clear": "gulp clearCache",
-		"lint": "gulp lint"
-	},
 	"keywords": [],
+	"license": "ISC",
 	"author": {
 		"name": "Arthur Baileys Li",
 		"url": "https://github.com/baileys-li"
 	},
-	"license": "ISC",
+	"type": "module",
+	"scripts": {
+		"build": "gulp build",
+		"cache:clear": "gulp clearCache",
+		"editorconfig": "npx editorconfig-cli",
+		"lint": "gulp lint && pnpm stylelint",
+		"start": "gulp",
+		"stylelint": "stylelint \"source/sass/**/*.scss\" --custom-syntax postcss-scss",
+		"stylelint:fix": "stylelint \"source/sass/**/*.scss\" --custom-syntax postcss-scss --fix"
+	},
+	"dependencies": {
+		"@fontsource/pt-sans": "^4.5.11"
+	},
 	"devDependencies": {
 		"browser-sync": "^2.29.1",
 		"del": "^7.0.0",
+		"editorconfig-cli": "^0.3.0",
 		"gulp": "^4.0.2",
 		"gulp-cache": "^1.1.3",
 		"gulp-esbuild": "^0.11.1",
@@ -34,16 +41,16 @@
 		"postcss-calc": "^8.2.4",
 		"postcss-csso": "^6.0.1",
 		"postcss-preset-env": "^8.3.2",
+		"postcss-scss": "^4.0.6",
 		"postcss-sort-media-queries": "^5.1.0",
 		"pug-bem": "^1.2.2",
 		"sass": "^1.62.1",
+		"stylelint": "^14.16.1",
+		"stylelint-config-htmlacademy": "^1.1.4",
 		"supports-webp": "^3.0.0",
 		"yaml": "^2.2.2"
 	},
 	"volta": {
 		"node": "18.16.0"
-	},
-	"dependencies": {
-		"@fontsource/pt-sans": "^4.5.11"
 	}
 }

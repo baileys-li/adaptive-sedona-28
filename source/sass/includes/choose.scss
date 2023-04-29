@@ -48,16 +48,15 @@
 			background-color: hsl(0, 0%, 20%);
 		}
 
-		&[type="radio"] {
+		&[type="radio"],
+		&[type="radio"]::after {
 			border-radius: 50%;
-			&::after {
-				border-radius: 50%;
-			}
 		}
 
 		&[type="checkbox"]::after {
-			mask: url(../img/sprite.svg#tick) no-repeat center/contain;
+			mask: url("../img/sprite.svg#tick") no-repeat center/contain;
 		}
+
 		&:checked {
 			--is-checked: 1;
 		}

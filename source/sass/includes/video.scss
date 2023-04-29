@@ -1,4 +1,5 @@
 @use "variables";
+
 .video {
 	background-color: variables.$accent;
 	position: relative;
@@ -38,16 +39,11 @@
 
 	&__play:is(:focus-visible, :hover) {
 		scale: 1.7;
-
-		& .video__icon {
-			fill-opacity: 1;
-		}
 	}
 
 	&__play:is(:focus-visible, :hover) &__icon {
 		fill-opacity: 1;
 	}
-
 
 	&__image {
 		width: 100%;

@@ -7,6 +7,7 @@
 		position: center;
 		size: cover;
 	}
+
 	@include mixins.adaptive-bg("../img/hero");
 	color: variables.$main-light;
 	display: grid;
@@ -30,11 +31,13 @@
 
 	&--inner {
 		min-height: 158px;
+
 		@include mixins.adaptive-bg("../img/hero-sliced");
 	}
 
 	@media (width >= variables.$earlyBP) {
 		min-height: 518px;
+
 		@include mixins.adaptive-bg("../img/hero-tab");
 
 		&__logo {
@@ -49,6 +52,7 @@
 
 		&--inner {
 			min-height: 290px;
+
 			@include mixins.adaptive-bg("../img/hero-sliced-tab");
 		}
 
@@ -67,6 +71,7 @@
 
 		&--inner {
 			min-height: 301px;
+
 			@include mixins.adaptive-bg("../img/hero-sliced-desk");
 		}
 	}

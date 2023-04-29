@@ -79,14 +79,15 @@
 			margin-bottom: 25px;
 		}
 
-		&__list, &__panorama, &__sublist {
+		&__list,
+		&__panorama,
+		&__sublist {
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
 		}
 
 		&__image {
 			grid-column-end: span 2;
-
 		}
 
 		&__full:nth-child(even) &__image {

@@ -1,6 +1,6 @@
 .map {
 	background: {
-		image: url(../img/map.png);
+		image: url("../img/map.png");
 		color: hsl(48, 16%, 94%);
 		position: center;
 		size: cover;
@@ -9,5 +9,4 @@
 
 	width: 100%;
 	border: none;
-	
 }
