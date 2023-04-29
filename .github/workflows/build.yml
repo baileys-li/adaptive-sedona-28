@@ -9,7 +9,7 @@ on:
       - '*'
 
 jobs:
-  deploy:
+  set-up:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout 🛎️
@@ -28,6 +28,9 @@ jobs:
 
     - name: Build 🏗️
       run: pnpm build
+
+    - name: Lint & Validation 📐
+      run: pnpm lint
 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4
