@@ -78,9 +78,6 @@ devDependencies:
   stylelint:
     specifier: ^15.6.0
     version: 15.6.0
-  stylelint-config-htmlacademy:
-    specifier: ^1.1.4
-    version: 1.1.4(stylelint@15.6.0)
   stylelint-config-standard-scss:
     specifier: ^9.0.0
     version: 9.0.0(postcss@8.4.23)(stylelint@15.6.0)
@@ -5814,14 +5811,6 @@ packages:
     resolution: {integrity: sha512-Dj1Okke1C3uKKwQcetra4jSuk0DqbzbYtXipzFlFMZtowbF1x7BKJwB9AayVMyFARvU8EDrZdcax4At/452cAg==}
     dev: true
 
-  /stylelint-config-htmlacademy@1.1.4(stylelint@15.6.0):
-    resolution: {integrity: sha512-rRT8WTmjHtD47UQJ2rW+xWhuayMEv6SDwPbgYPtdHUrmn5FWC2rsXNVxtRm9lb9of866iIrMnYrwqv3FVWLmVQ==}
-    dependencies:
-      stylelint-config-recommended: 9.0.0(stylelint@15.6.0)
-    transitivePeerDependencies:
-      - stylelint
-    dev: true
-
   /stylelint-config-recommended-scss@11.0.0(postcss@8.4.23)(stylelint@15.6.0):
     resolution: {integrity: sha512-EDghTDU7aOv2LTsRZvcT1w8mcjUaMhuy+t38iV5I/0Qiu6ixdkRwhLEMul3K/fnB2v9Nwqvb3xpvJfPH+HduDw==}
     peerDependencies:
@@ -5842,14 +5831,6 @@ packages:
     resolution: {integrity: sha512-x6x8QNARrGO2sG6iURkzqL+Dp+4bJorPMMRNPScdvaUK8PsynriOcMW7AFDKqkWAS5wbue/u8fUT/4ynzcmqdQ==}
     peerDependencies:
       stylelint: ^15.5.0
-    dependencies:
-      stylelint: 15.6.0
-    dev: true
-
-  /stylelint-config-recommended@9.0.0(stylelint@15.6.0):
-    resolution: {integrity: sha512-9YQSrJq4NvvRuTbzDsWX3rrFOzOlYBmZP+o513BJN/yfEmGSr0AxdvrWs0P/ilSpVV/wisamAHu5XSk8Rcf4CQ==}
-    peerDependencies:
-      stylelint: ^14.10.0
     dependencies:
       stylelint: 15.6.0
     dev: true

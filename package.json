@@ -13,10 +13,10 @@
 		"build": "gulp build",
 		"cache:clear": "gulp clearCache",
 		"editorconfig": "npx editorconfig-cli",
-		"lint": "gulp lint && pnpm stylelint",
-		"start": "gulp",
-		"stylelint": "stylelint \"source/sass/**/*.scss\" --custom-syntax postcss-scss",
-		"stylelint:fix": "stylelint \"source/sass/**/*.scss\" --custom-syntax postcss-scss --fix"
+		"fix:scss": "stylelint \"source/sass/**/*.scss\" --custom-syntax postcss-scss --fix",
+		"lint": "gulp lint && pnpm lint:scss",
+		"lint:scss": "stylelint \"source/sass/**/*.scss\" --custom-syntax postcss-scss",
+		"start": "gulp"
 	},
 	"dependencies": {
 		"@fontsource/pt-sans": "^4.5.11"
@@ -46,7 +46,6 @@
 		"pug-bem": "^1.2.2",
 		"sass": "^1.62.1",
 		"stylelint": "^15.6.0",
-		"stylelint-config-htmlacademy": "^1.1.4",
 		"stylelint-config-standard-scss": "^9.0.0",
 		"supports-webp": "^3.0.0",
 		"yaml": "^2.2.2"
