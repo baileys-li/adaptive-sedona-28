@@ -26,6 +26,10 @@
 
 	@media (width >= $bp-tablet) {
 		padding-top: 58px;
+
+		&__video {
+			aspect-ratio: 16 / 9;
+		}
 	}
 
 	@media (width >= $bp-desk) {

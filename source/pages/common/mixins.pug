@@ -1,16 +1,9 @@
-mixin placeholderIcon({width, height = width, fill = 'currentColor', label, className=undefined})
-	-
-		const hidden = !label && "true"
-		const role = label && "img"
-	svg(width=width height=height viewBox=`0 0 ${width} ${height}` fill=fill aria-hidden=hidden arial-label=label role=role class=className )
-		rect(width=width height=height)
-
-mixin spriteIcon({width, height = width, fill = 'currentColor', label, className=undefined, href, id})
+mixin spriteIcon({width, height = width, fill = 'currentColor', label, className=undefined, href, id, opacity})
 	-
 		const hidden = !label && "true"
 		const role = label && "img"
 		const titleID = id && `title-${id}`
-	svg(class=className role=role width=width height=height viewBox=`0 0 ${width} ${height}` fill=fill aria-hidden=hidden  aria-labelledby=titleID)
+	svg(class=className role=role width=width height=height viewBox=`0 0 ${width} ${height}` fill=fill aria-hidden=hidden  aria-labelledby=titleID fill-opacity=opacity)
 		if label
 			title(id=titleID)=label
 		use(href=href)
