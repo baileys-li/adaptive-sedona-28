@@ -12,21 +12,8 @@ $logo-width: 185px;
 	}
 
 	&__toggle {
-		background-color: transparent;
-		color: $accent;
-		border: 0;
-		padding: 17px 20px;
 		justify-self: end;
-		cursor: pointer;
 		z-index: 11;
-
-		&:hover {
-			opacity: 0.6;
-		}
-
-		&:active {
-			opacity: 0.3;
-		}
 	}
 
 	&__list {

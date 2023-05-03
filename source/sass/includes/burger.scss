@@ -1,13 +1,49 @@
 .burger {
-	&__close {
-		display: none;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	transition: color 0.3s ease-in-out;
+	padding: 17px 20px;
+
+	color: hsl(203deg 47% var(--lightning, 66%));
+
+	outline-color: currentColor;
+
+	&:focus {
+		outline: none;
 	}
 
-	&[aria-expanded="true"] &__close {
-		display: block;
+	&:focus-visible {
+		outline: 2px solid currentColor;
 	}
 
-	&[aria-expanded="true"] &__open {
-		display: none;
+	&:is(:hover, :focus-visible) {
+		opacity: 60%;
+	}
+
+	&:active {
+		opacity: 30%;
+	}
+
+	&[aria-expanded="true"] {
+		--lightning: 100%;
+	}
+
+	&__line {
+		transition: transform 0.3s ease-in-out;
+	}
+
+	&[aria-expanded="true"] &__line {
+		&--top {
+			transform: rotate(45deg) translate(24%, -6%);
+		}
+
+		&--middle {
+			transform: translateX(100%);
+		}
+
+		&--bottom {
+			transform: rotate(-45deg) translate(-52%, -11%);
+		}
 	}
 }
