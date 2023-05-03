@@ -18,8 +18,10 @@ if (navigation && toggle && list) {
 function toggleNav() {
 	const isWillBeOpen = toggle!.getAttribute('aria-expanded') === 'false';
 
+	toggle!.title = `${isWillBeOpen ? 'Закрыть' : 'Открыть'} меню`;
 	toggle!.setAttribute('aria-expanded', String(isWillBeOpen));
-	toggle!.ariaLabel = toggle!.title = `${isWillBeOpen ? 'Закрыть' : 'Открыть'} меню`;
+	toggle!.setAttribute('aria-label',toggle!.title);
+
 	list!.inert = !isWillBeOpen;
 }
 

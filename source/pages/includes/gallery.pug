@@ -14,5 +14,5 @@ section.gallery
 				figcaption._caption
 					h3._title=photo.title
 					p._description Автор фото:#{photo.author}
-					button._like(type='button' aria-label="Поставить лайк" aria-description=`Всего ${photo.likes}` data-likes=photo.likes)
+					button.like._like(type='button' aria-label="Поставить лайк" aria-description=`Всего ${photo.likes}` value=photo.likes aria-pressed="false")
 						+spriteIcon({href: `img/sprite.svg#like`, width: 24, height: 22})

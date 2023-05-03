@@ -26,34 +26,6 @@
 		font-size: 1em;
 	}
 
-	&__like {
-		color: rgba(#000000, 30%);
-		background-color: transparent;
-		cursor: pointer;
-		border: none;
-		padding: 0;
-		transition: color 0.2s ease-in-out;
-		font-weight: 700;
-		gap: 1em;
-		display: flex;
-		align-items: end;
-
-		&::after {
-			content: attr(data-likes);
-			color: #000000;
-		}
-
-		&[aria-pressed="true"] {
-			color: hsl(203deg 47% 66%);
-
-			--filled: currentColor;
-		}
-
-		&:is(:hover, :focus-visible) {
-			color: hsl(203deg 47% 66%);
-		}
-	}
-
 	@media (width >= $bp-tablet) {
 		padding: 0;
 		background-color: $page-bg;

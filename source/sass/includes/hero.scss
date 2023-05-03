@@ -72,6 +72,7 @@
 
 		&--inner {
 			min-height: 301px;
+
 			@include mixins.adaptive-bg("../img/hero/hero-sliced-desk");
 		}
 	}
